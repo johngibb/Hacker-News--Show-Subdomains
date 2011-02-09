@@ -1,11 +1,17 @@
 {
-  "name": "My First Extension",
+  "name": "Hacker News - Show Full Domain",
   "version": "1.0",
-  "description": "The first extension that I made.",
+  "description": "This is an extension to show the full domain next to a link, rather than just the last part. I.e., now you'll see blog.google.com instead of just google.com.",
   "browser_action": {
     "default_icon": "icon.png"
   },
+  "content_scripts": [
+    {
+      "matches": ["http://news.ycombinator.com/*"],
+      "js": ["jquery.js", "fix_domains.js"]
+    }
+  ],
   "permissions": [
-    "http://api.flickr.com/"
+    "tabs", "http://news.ycombinator.com/*"
   ]
 }
