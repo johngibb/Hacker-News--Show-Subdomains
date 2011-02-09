@@ -1,5 +1,5 @@
 var getDomain = function(url){
-	return url.replace(/^http:\/\//, '').replace(/\/.*$/, '');
+	return url.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
 }
 
 var links = $('td.title a');
