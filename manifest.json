@@ -9,6 +9,6 @@
     }
   ],
   "permissions": [
-    "tabs", "http://news.ycombinator.com/*"
+    "tabs"
   ]
 }
