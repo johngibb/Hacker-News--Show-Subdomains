@@ -1,0 +1,24 @@
+<html>
+   <head>
+      <script>
+         var getUrl = function(url, success){
+         	var xhr = new XMLHttpRequest();
+         	xhr.open("GET", url, true);
+         	xhr.onreadystatechange = function() {
+         	  if (xhr.readyState == 4) success(xhr.responseText);
+         	}
+         	xhr.send();
+         }
+      
+         chrome.extension.onRequest.addListener(
+           function(request, sender, sendResponse) {
+              if (!!request.getLocalUrl){
+                	var url = chrome.extension.getURL(request.getLocalUrl);
+                  getUrl(url, function(src){
+                     sendResponse(src); 
+                  })
+               }
+           });
+      </script>
+   </head>
+</html>
