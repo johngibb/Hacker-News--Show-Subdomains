@@ -1,5 +1,8 @@
 function getDomain(url) {
-  return url.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
+  url = url.replace(/^https?:\/\//, '');
+  url = url.replace(/\/.*$/, '');
+  url = url.replace(/^www\./, '');
+  return url;
 }
 
 $('td.title a').each(function(){
