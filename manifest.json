@@ -7,8 +7,5 @@
       "matches": ["http://news.ycombinator.com/*"],
       "js": ["jquery.js", "fix_domains.js"]
     }
-  ],
-  "permissions": [
-    "tabs"
   ]
 }
