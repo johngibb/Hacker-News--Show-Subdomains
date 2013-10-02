@@ -4,7 +4,7 @@
   "description": "This is an extension to show the full domain (including subdomains) next to a link, rather than just the root.",
   "content_scripts": [
     {
-      "matches": ["http://news.ycombinator.com/*"],
+      "matches": ["https://news.ycombinator.com/*"],
       "js": ["jquery.js", "fix_domains.js"]
     }
   ]
